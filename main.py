@@ -41,11 +41,11 @@ def main():
         for file in os.listdir(cwd):
             file_path = os.path.join(cwd, file)
             if os.path.isfile(file_path):
-                for file_name, file_extension in os.path.splitext(file_path):
-                    if file_extension in extension_list:
-                        new_folder = file_extension + "_files"
-                        new_path = os.path.join(cwd, new_folder)
-                        move_file_to_new_folder(cwd, new_path)
+                file_name, file_extension = os.path.splitext(file_path)
+                if file_extension in extension_list:
+                    new_folder = file_extension + "_files"
+                    new_path = os.path.join(cwd, new_folder)
+                    move_file_to_new_folder(cwd, new_path)
 
 
 if __name__ == "__main__":

@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c5b5521-ef4d-4ce4-9f61-f550e37d0a69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BANK App.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bb.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitcoin.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +97,7 @@
       <workItem from="1705614019291" duration="1764000" />
       <workItem from="1705615813754" duration="2554000" />
       <workItem from="1705867789769" duration="3357000" />
-      <workItem from="1705872209466" duration="2298000" />
+      <workItem from="1705872209466" duration="2663000" />
     </task>
     <servers />
   </component>
@@ -132,6 +128,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/car_eval$input_test.coverage" NAME="input_test Coverage Results" MODIFIED="1705872512701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/car_eval$main.coverage" NAME="main Coverage Results" MODIFIED="1705874430226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/car_eval$main.coverage" NAME="main Coverage Results" MODIFIED="1705874721041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

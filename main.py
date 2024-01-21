@@ -43,7 +43,7 @@ def organize_files_in_directory(directory_path):
         if os.path.isfile(file_path):
             _, file_extension = os.path.splitext(file_path)
             if file_extension in extension_list:
-                new_folder = os.path.join(directory_path, file_extension + "_files")
+                new_folder = os.path.join(directory_path, file_extension.replace(".","") + "_files")
                 new_path = os.path.join(new_folder, file)
                 old_path = file_path
 

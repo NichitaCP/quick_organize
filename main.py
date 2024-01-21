@@ -2,9 +2,6 @@ import os
 
 
 def move_file_to_new_folder(old_path, new_path):
-    if not os.path.isdir(new_path):
-        print(f"Folder {new_path} doesn't exist. Creating new folder")
-        os.mkdir(new_path)
     os.rename(old_path, new_path)
 
 
@@ -28,24 +25,40 @@ def create_all_extensions(directory):
         full_file_path = os.path.join(directory, element)
         if os.path.isfile(full_file_path):
             name, extension = os.path.splitext(full_file_path)
-            if extension not in extensions:
+            if extension == '.py':
+                continue
+            elif extension not in extensions:
                 extensions.append(extension)
     return list(set(extensions))
 
 
+def organize_files_in_directory(directory_path):
+    if not os.path.exists(directory_path):
+        print(f"Specified directory '{directory_path}' does not exist.")
+        return
+
+    extension_list = create_all_extensions(directory_path)
+    for file in os.listdir(directory_path):
+        file_path = os.path.join(directory_path, file)
+        if os.path.isfile(file_path):
+            _, file_extension = os.path.splitext(file_path)
+            if file_extension in extension_list:
+                new_folder = os.path.join(directory_path, file_extension + "_files")
+                new_path = os.path.join(new_folder, file)
+                old_path = file_path
+
+                if not os.path.exists(new_folder):
+                    os.mkdir(new_folder)
+
+                move_file_to_new_folder(old_path, new_path)
+
+
 def main():
     if assert_current_directory():
-        cwd = os.getcwd()
-        extension_list = create_all_extensions(cwd)
-        print(cwd)
-        for file in os.listdir(cwd):
-            file_path = os.path.join(cwd, file)
-            if os.path.isfile(file_path):
-                file_name, file_extension = os.path.splitext(file_path)
-                if file_extension in extension_list:
-                    new_folder = file_extension + "_files"
-                    new_path = os.path.join(cwd, new_folder)
-                    move_file_to_new_folder(cwd, new_path)
+        organize_files_in_directory(os.getcwd())
+    else:
+        specified_path = get_folder_where_to_run_script()
+        organize_files_in_directory(specified_path)
 
 
 if __name__ == "__main__":
